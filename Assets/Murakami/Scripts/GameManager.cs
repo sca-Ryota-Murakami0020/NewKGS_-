@@ -198,8 +198,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if(player.KEYCOUNT >= 3) {
+        if(player.KEYCOUNT >= 3 && SceneManager.GetActiveScene().name == "Murakami") {
             keyActiveObj.SetActive(false);
+        }
+        else if(player.KEYCOUNT >= 3 && SceneManager.GetActiveScene().name == "未来ステージ")
+        {
+            keyActiveObj.SetActive(true);
         }
 
         //Debug.Log(dessPosition);

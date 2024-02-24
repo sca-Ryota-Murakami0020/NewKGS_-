@@ -25,7 +25,7 @@ public class LeverController : MonoBehaviour
 
     private void OnTriggerEnter(Collider col) {
         if(col.tag == "Player") {
-            //player.MISSIO = true;
+            player.MISSIO = true;
             anim.enabled = true;
             StartCoroutine(WaitValue());
             
@@ -41,10 +41,14 @@ public class LeverController : MonoBehaviour
     IEnumerator WaitValue() {
         yield return new WaitForSeconds(1.0f);
         {
+            if(player.KEYCOUNT != 3) { 
             missionManager.MISSIONVALUE[missionManager.RADOMMISSIONCOUNT] = 1;
             missionManager.KeyActive(missionManager.RADOMMISSIONCOUNT);
-            missionManager.MiSSIONCOUNT++;
+            //missionManager.MiSSIONCOUNT++;
+            //missionManager.YBUTTON = false;
+            //missionManager.STATMISSION = false;
             this.gameObject.SetActive(false);
+            }
         }
     }
 }

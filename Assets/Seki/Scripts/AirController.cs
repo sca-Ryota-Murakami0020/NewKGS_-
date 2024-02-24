@@ -33,6 +33,7 @@ public class AirController : MonoBehaviour
     [SerializeField] GameObject[] missIcon;
     [SerializeField] PauseManager pause;
     [SerializeField] MissionManager missionManager;
+    [SerializeField] GameObject mono;
     //ここに爆発のエフェクトを用意
 
     bool air = false;
@@ -72,7 +73,7 @@ public class AirController : MonoBehaviour
         }
 
         if(hitCount >= 3 && !air) {
-            
+            player.MISSIO = true;
             //ここに爆発のエフェクトを出す
             StartCoroutine(WaitActive());
             air = true;
@@ -81,14 +82,17 @@ public class AirController : MonoBehaviour
 
     IEnumerator WaitActive() {
         yield return null;
+        if(player.KEYCOUNT != 3) { 
         missionManager.MISSIONVALUE[missionManager.RADOMMISSIONCOUNT] = 1;
         missionManager.KeyActive(missionManager.RADOMMISSIONCOUNT);
-        missionManager.MiSSIONCOUNT++;
-        this.gameObject.SetActive(false);
+            //missionManager.MiSSIONCOUNT++;7
+            mono.SetActive(false);
+            this.gameObject.SetActive(false);
+        }
     }
-    
 
-    private void OnCollisionEnter(Collision collision) {    
+
+        private void OnCollisionEnter(Collision collision) {    
         if(collision.gameObject.tag == "air") {
             hit = true;
             gameManager.GAMEOVER = true;

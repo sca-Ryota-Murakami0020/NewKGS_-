@@ -5,11 +5,12 @@ using UnityEngine;
 public class ParticlCol : MonoBehaviour
 {
     [SerializeField] AirController airplane;
-    private void OnParticleCollision(GameObject other)
+   
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "airplane")
+        if (collision.gameObject.tag == "airplane")
         {
-            airplane.HITCOUNT++;
+            //airplane.HITCOUNT++;
             Debug.Log("“–‚½‚Á‚½");
             this.gameObject.SetActive(false);
         }

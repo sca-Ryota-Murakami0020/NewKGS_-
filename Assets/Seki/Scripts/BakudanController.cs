@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BakudanController : MonoBehaviour
 {
     [SerializeField] MissionManager missionManager;
+    [SerializeField] PlayerC player;
     int bakudanCount = 0;
     public int BAKUDACOUNT {
         set {
@@ -22,10 +23,15 @@ public class BakudanController : MonoBehaviour
     void Update()
     {
         if(bakudanCount >= 3 && !bakudan) {
-            missionManager.MISSIONVALUE[missionManager.RADOMMISSIONCOUNT]++;
+            if(player.KEYCOUNT != 3) { 
+            missionManager.MISSIONVALUE[missionManager.RADOMMISSIONCOUNT] = 3;
             missionManager.KeyActive(missionManager.RADOMMISSIONCOUNT);
-            missionManager.MiSSIONCOUNT++;
+                player.MISSIO = true;
+            //missionManager.MiSSIONCOUNT++;
+            //missionManager.STATMISSION = false;
+            //missionManager.YBUTTON = false;
             bakudan = true;
+            }
         }
 
         
