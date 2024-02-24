@@ -4078,9 +4078,10 @@ GameObject:
   - component: {fileID: 1087673174070670683}
   - component: {fileID: 6826720673868234807}
   - component: {fileID: 4003280975654670347}
+  - component: {fileID: 711906068995184933}
   m_Layer: 0
   m_Name: PBR_Velociraptor_Green
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4113,9 +4114,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8951429737276468317}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 923da24417bde954e8eb93a36c143958, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28a17a2fa5a679142ae6a8b9a99b164d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -4300,10 +4301,26 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.7093644, z: 3.5781097}
+  m_Center: {x: 0, y: 0.8503742, z: 0.37320805}
+--- !u!111 &711906068995184933
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8951429737276468317}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 9067214625058211241, guid: 923da24417bde954e8eb93a36c143958, type: 3}
+  m_Animations:
+  - {fileID: 9067214625058211241, guid: 923da24417bde954e8eb93a36c143958, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &9041897777905351009
 GameObject:
   m_ObjectHideFlags: 0
