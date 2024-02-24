@@ -12,6 +12,8 @@ public class CoinC : MonoBehaviour
     [SerializeField] private Renderer coinRenderer;
     //コインのメッシュ
     [SerializeField] private MeshRenderer mesh;
+    //タグ
+    private string tagName;
 
     //プレイヤーとコインの距離
     private float playerDistance = 0.0f;
@@ -33,20 +35,33 @@ public class CoinC : MonoBehaviour
     private PlayerC playerC;
     //大きさの最小値
     private Vector3 minScale;
+    //ミッション用に表示されている判定
+    private bool isShowed;
 
     private GameManager gameManager;
     MissionManager mission;
 
     void Start()
     {
+        //タグの取得
+        tagName = this.gameObject.tag;
         SelectMaterial();
+
         mission = GameObject.Find("MissionManager").GetComponent<MissionManager>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerObject = GameObject.Find("PlayerModel");
         playerC = playerObject.GetComponent<PlayerC>();
+
         defScale = this.transform.localScale;
         defPos = this.transform.position;
         currentScaleMag = defScale;
+        //特定のタグなら消す
+        if(this.gameObject.tag == "SanpaiCoin")
+        {
+            this.mesh.enabled = false;
+            isShowed = false;
+        }
+
         playerPosition = playerObject.transform.position;
     }
 
@@ -72,6 +87,22 @@ public class CoinC : MonoBehaviour
             {
                 GetCoin();
             }
+        }
+
+        if(mission.RADOMMISSIONCOUNT == 2 && !isShowed && tagName == "SanpaiCoin")
+        {
+            ActiveCoins();
+        }
+    }
+
+    //コインの表示
+    private void ActiveCoins()
+    {
+        if(this.mesh.enabled) return;
+        else
+        {
+            this.mesh.enabled = true;
+            isShowed = true;
         }
     }
 

@@ -55,6 +55,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] CinemachineInputProvider cinema;
     [SerializeField] GameObject[] line;
     [SerializeField] GameObject[] titleBack;
+    [SerializeField] Canvas myCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +87,8 @@ public class PauseManager : MonoBehaviour
         alfa = PausePanel.color.a;
         //alfa = 0f;
         stageName = SceneManager.GetActiveScene().name;
+
+        myCanvas.renderMode = RenderMode.ScreenSpaceCamera;
     }
 
     // Update is called once per frame
@@ -107,6 +110,7 @@ public class PauseManager : MonoBehaviour
             if(myPos.localPosition == Point[0].localPosition) {
                 LineMove(0);
                 if (Gamepad.current.bButton.wasPressedThisFrame && !check) {
+                    myCanvas.renderMode = RenderMode.ScreenSpaceCamera;
                     isFadeFlag = true;
                     check = true;
                     playStart = true;
@@ -138,6 +142,7 @@ public class PauseManager : MonoBehaviour
         //É|Å[ÉYíÜÇ∂Ç·Ç»Ç¢
         else if(!mission.MISSIONFLAG && !restart) {
             if(Gamepad.current.startButton.isPressed) {
+                myCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
                 cinema.enabled = false;
                 pause = true;
                 isFadeFlag = true;
