@@ -1936,9 +1936,10 @@ GameObject:
   - component: {fileID: 4164675566864830253}
   - component: {fileID: 8002737017523601128}
   - component: {fileID: -3735409045140013210}
+  - component: {fileID: 5003630910967203300}
   m_Layer: 0
   m_Name: PBR_Velociraptor_Orange
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1973,7 +1974,7 @@ Animator:
   m_GameObject: {fileID: 5398139518928115243}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 923da24417bde954e8eb93a36c143958, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28a17a2fa5a679142ae6a8b9a99b164d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2158,10 +2159,26 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.7963954, z: 4.0330777}
+  m_Center: {x: 0, y: 0.8544602, z: 0.5489037}
+--- !u!111 &5003630910967203300
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398139518928115243}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 9067214625058211241, guid: 923da24417bde954e8eb93a36c143958, type: 3}
+  m_Animations:
+  - {fileID: 9067214625058211241, guid: 923da24417bde954e8eb93a36c143958, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5433105652819017351
 GameObject:
   m_ObjectHideFlags: 0

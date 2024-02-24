@@ -218,11 +218,6 @@ public class GameManager : MonoBehaviour
         } else {
             //cinema.enabled = false;
         }
-
-        if(!pause.PAUSE && !mission.MISSIONFLAG && !player.ALLGOAL && !GameOver)
-        {
-            CountGameTime();
-        }
     }
 
     void GameClearActive() {
@@ -385,22 +380,6 @@ public class GameManager : MonoBehaviour
     public void AddActiveCoin(GameObject coin)
     {
         activeCoins.Enqueue(coin);
-    }
-
-    int rage = 100;
-    //ゲーム時間計算
-    private void CountGameTime()
-    {
-        //時間計測
-        currentGameTime += Time.deltaTime;
-        if(currentGameTime >= 1.0f)
-        {
-            stageCount -= 1;
-            currentGameTime = 0.0f;
-        }
-        timeImage[0].sprite = numberImage[stageCount / rage];
-        timeImage[1].sprite = numberImage[(stageCount % rage) / 10];
-        timeImage[2].sprite = numberImage[stageCount % (rage / 10)];
     }
 
     //スコア計算

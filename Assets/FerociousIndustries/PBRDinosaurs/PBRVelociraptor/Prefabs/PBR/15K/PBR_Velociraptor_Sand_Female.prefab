@@ -3754,9 +3754,10 @@ GameObject:
   - component: {fileID: 2723387572160377518}
   - component: {fileID: 6494088808620981137}
   - component: {fileID: -1718717126519512191}
+  - component: {fileID: 5208766155204317867}
   m_Layer: 0
   m_Name: PBR_Velociraptor_Sand_Female
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4003,10 +4004,26 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.900857, z: 3.692948}
+  m_Center: {x: 0, y: 0.91911864, z: 0.5123657}
+--- !u!111 &5208766155204317867
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429019503320660298}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 9067214625058211241, guid: 923da24417bde954e8eb93a36c143958, type: 3}
+  m_Animations:
+  - {fileID: 9067214625058211241, guid: 923da24417bde954e8eb93a36c143958, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8463859163183747558
 GameObject:
   m_ObjectHideFlags: 0
