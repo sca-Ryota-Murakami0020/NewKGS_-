@@ -271,6 +271,23 @@ public class GameManager : MonoBehaviour
                 SetAlpha();
             }
             else if(P_alfa >= 1.0f) {
+                if (StageSelectController.mode == StageSelectController.MODE.STORY)
+                {
+                    TitleManager.sceneName = "MojiHyouji";
+                    SceneManager.LoadScene("LoadScene");
+                }
+                else if (StageSelectController.mode == StageSelectController.MODE.CHALLENGE)
+                {
+                    if(SousaUIContorller.stageClear == 1)
+                    {
+                        TitleManager.sceneName = "未来ステージ";
+                    }
+                    else if (SousaUIContorller.stageClear == 2)
+                    {
+                        TitleManager.sceneName = "過去ステージ";
+                    }
+                    SceneManager.LoadScene("LoadScene");
+                }
                 TitleManager.sceneName = "MojiHyouji";
                 SceneManager.LoadScene("LoadScene");
             }
