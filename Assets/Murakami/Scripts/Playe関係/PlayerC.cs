@@ -703,7 +703,7 @@ public class PlayerC : MonoBehaviour
         if(col.tag == "mission") {
 
             mission.KeyActive(mission.RADOMMISSIONCOUNT);
-            if(mission.RADOMMISSIONCOUNT != 2) {
+            if(mission.RADOMMISSIONCOUNT != 2 && SceneManager.GetActiveScene().name == "Murakami") {
                 mission.MISSIONVALUE[mission.RADOMMISSIONCOUNT]++;
             }
             if(mission.MiSSIONCOUNT != 3) {

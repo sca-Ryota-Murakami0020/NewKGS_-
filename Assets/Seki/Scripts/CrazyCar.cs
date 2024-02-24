@@ -62,9 +62,14 @@ public class CrazyCar : MonoBehaviour
             other.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
             //ミッションの達成ポイントを加算する
+            if(player.KEYCOUNT != 3) { 
             missionManager.MISSIONVALUE[missionManager.RADOMMISSIONCOUNT]++;
             missionManager.KeyActive(missionManager.RADOMMISSIONCOUNT);
-            missionManager.MiSSIONCOUNT++;
+            //missionManager.MiSSIONCOUNT++;
+            player.MISSIO = true;
+            //missionManager.YBUTTON = false;
+            //missionManager.STATMISSION = false;
+            }
         }
     }
 }

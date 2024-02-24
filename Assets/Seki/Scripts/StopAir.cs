@@ -21,8 +21,9 @@ public class StopAir : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(count);
+        //1Debug.Log(count);
         if(count == 3) {
+            airplane.HITCOUNT = 3;
             airplane.AIRSPEED = 0.0f;
             //エフェクト再生
             beam.SetActive(true);

@@ -105,6 +105,7 @@ public class CatController : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            if(playerC.KEYCOUNT != 3) { 
             missionManager.STATMISSION = false;
             missionManager.YBUTTON = false;
             playerC.MISSIO = true;
@@ -112,6 +113,7 @@ public class CatController : MonoBehaviour
             missionManager.KeyActive(missionManager.RADOMMISSIONCOUNT);
             //StartCoroutine(WaitNotActive());
             this.gameObject.SetActive(false);
+            }
         }
     }
 
