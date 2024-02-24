@@ -89,9 +89,14 @@ public class CoinC : MonoBehaviour
             }
         }
 
-        if(mission.RADOMMISSIONCOUNT == 2 && !isShowed && tagName == "SanpaiCoin")
+        if(mission.RADOMMISSIONCOUNT == 2 && !isShowed && this.tagName == "SanpaiCoin")
         {
             ActiveCoins();
+        }
+
+        if(mission.RADOMMISSIONCOUNT != 2 && this.tagName == "SanpaiCoin")
+        {
+            this.mesh.enabled = false;
         }
     }
 
@@ -114,7 +119,7 @@ public class CoinC : MonoBehaviour
             case 10:
                 this.coinRenderer.material = cainMaterial[0];
                 break;
-            case 100:
+            case 50:
                 this.coinRenderer.material = cainMaterial[1];
                 break;
             case 500:
