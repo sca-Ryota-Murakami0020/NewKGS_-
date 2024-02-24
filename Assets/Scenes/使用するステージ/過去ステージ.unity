@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1607,6 +1607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 801834012}
     m_Modifications:
+    - target: {fileID: 2038004491484268802, guid: 18cdeb82e935406469fd3a3f3d385b5f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 71b57c9313d496b45abccceeda3e856d, type: 2}
     - target: {fileID: 4943026393367729771, guid: 18cdeb82e935406469fd3a3f3d385b5f, type: 3}
       propertyPath: m_Name
       value: PBR_Velociraptor_Blue
@@ -1968,6 +1972,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.51
       objectReference: {fileID: 0}
+    - target: {fileID: 3182002649902229027, guid: a6e428d25621838498eed77023033d4b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 71b57c9313d496b45abccceeda3e856d, type: 2}
     - target: {fileID: 4801608289996671833, guid: a6e428d25621838498eed77023033d4b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -19416,6 +19424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1581425698}
     m_Modifications:
+    - target: {fileID: 2659525053879235380, guid: b4281f7b16533374cbb8e4ce856709bf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 71b57c9313d496b45abccceeda3e856d, type: 2}
     - target: {fileID: 4003280975654670347, guid: b4281f7b16533374cbb8e4ce856709bf, type: 3}
       propertyPath: m_Size.y
       value: 1.83
@@ -52349,6 +52361,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1313733137397123394, guid: 67e00b0ea633db443add4eba34618762, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 71b57c9313d496b45abccceeda3e856d, type: 2}
     - target: {fileID: 5398139518928115243, guid: 67e00b0ea633db443add4eba34618762, type: 3}
       propertyPath: m_Name
       value: PBR_Velociraptor_Orange
