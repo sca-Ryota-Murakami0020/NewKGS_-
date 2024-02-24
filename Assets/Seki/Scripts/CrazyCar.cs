@@ -55,7 +55,8 @@ public class CrazyCar : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "syata") {
+        if(other.gameObject.tag == "Syata") {
+            Debug.Log("hurete");
             agent.speed = 0f;
             stop = true;
             other.gameObject.SetActive(false);
