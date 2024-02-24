@@ -157,6 +157,7 @@ public class MissionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("—”"+missionCount);
         if(!missionFlag && !missionClear && !ybutton) {
             if(Gamepad.current.yButton.wasPressedThisFrame) {
                 sousaCount++;
@@ -177,7 +178,7 @@ public class MissionManager : MonoBehaviour
             }
         }
     
-        if(missionCount >= 1 && !startMission && playerC.IsGrand) {
+        if(missionCount >= 1 && !startMission) {// && playerC.IsGrand
             //StartCoroutine(WaitMission());
             ActivationMission();
         }

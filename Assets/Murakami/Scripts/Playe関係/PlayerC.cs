@@ -344,6 +344,7 @@ public class PlayerC : MonoBehaviour
             case "Key":
                 getKey = true;
                 if(mission.MiSSIONCOUNT < 2) {
+                   
                     StartCoroutine(WaitKeyFlag());
                 }
                 if(KeyCount < 4) {

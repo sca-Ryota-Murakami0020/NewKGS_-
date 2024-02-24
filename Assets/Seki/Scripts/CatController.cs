@@ -63,15 +63,15 @@ public class CatController : MonoBehaviour
             agent.speed = 3.5f;
         }
 
+        /*
         if(dirastionCount == 4 && !cat) {
 
-            //playerC.MISSIO = true;
-            missionManager.MISSIONVALUE[missionManager.RADOMMISSIONCOUNT]++;
-            missionManager.KeyActive(missionManager.RADOMMISSIONCOUNT);
-            missionManager.MiSSIONCOUNT++;
+            
+            //missionManager.MiSSIONCOUNT++;
             cat = true;
-            StartCoroutine(WaitNotActive());
+            //StartCoroutine(WaitNotActive());
         }
+        */
         //CatStop();
     }
 
@@ -92,10 +92,27 @@ public class CatController : MonoBehaviour
     //yield return new WaitForSeconds(5.0f);
     //move = false;
     //}
-
+    /*
     IEnumerator WaitNotActive() {
-        yield return new WaitForSeconds(2.0f);
-        this.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1.0f);
+
+        //missionManager.YBUTTON = false;
+       // missionManager.STATMISSION = false;
+       
+    }
+    */
+    private void OnTriggerEnter(Collider col)
+    {
+        if(col.gameObject.tag == "Player")
+        {
+            missionManager.STATMISSION = false;
+            missionManager.YBUTTON = false;
+            playerC.MISSIO = true;
+            missionManager.MISSIONVALUE[missionManager.RADOMMISSIONCOUNT]++;
+            missionManager.KeyActive(missionManager.RADOMMISSIONCOUNT);
+            //StartCoroutine(WaitNotActive());
+            this.gameObject.SetActive(false);
+        }
     }
 
     /*
